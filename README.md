@@ -42,9 +42,12 @@ Check out our tutorial on the Conversational Agent [here](https://haystack.deeps
 2. Run the streamlit app:
 `streamlit run app.py`
 3. Createa a `.env` and add your Twitter Bearer token, OpenAI Key, and SerperDev Key:
-`TWITTER_BEARER_TOKEN`
-`SERPER_KEY`
-`OPENAI_API_KEY`
+
+`TWITTER_BEARER_TOKEN`    
+
+`SERPER_KEY`  
+
+`OPENAI_API_KEY`    
 
 This will start up the app on `localhost:8501` where you will find a simple search bar
 
