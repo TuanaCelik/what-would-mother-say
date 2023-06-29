@@ -37,7 +37,6 @@ def start_haystack(openai_key, twitter_bearer, serper_key, last_k_tweets):
 
 @st.cache_data(show_spinner=True)
 def query(_agent, question):
-    print("USER Q: {question}")
     try:
         result = _agent.run(question)
     except Exception as e:
