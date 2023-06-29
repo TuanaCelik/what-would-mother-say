@@ -12,8 +12,8 @@ pinned: false
 # What would mother say?
 
 This app includes a Haystack agent with access to 2 tools:
-- TweetRetriever: Useful for when you need to retrive the latest tweets from a username to get an understanding of their style
-- WebSearch:Uesful for when you need to research the latest about a new topic
+- `TweetRetriever`: Useful for when you need to retrive the latest tweets from a username to get an understanding of their style
+- `WebSearch`: Useful for when you need to research the latest about a new topic
 
 We build an Agent that aims to first understand the style in which a username tweets. Then, it uses the WebSearch tool to gain knowledge on a topic that the LLM may not have info on, to generate a tweet in the users style about that topic.
 ### Try it out on [🤗 Spaces](https://huggingface.co/spaces/Tuana/what-would-mother-say)
