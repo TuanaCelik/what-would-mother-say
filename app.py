@@ -6,7 +6,7 @@ from markdown import markdown
 import requests
 
 import streamlit as st
-
+from utils.haystack import run_agent
 from utils.ui import reset_results, set_initial_state, sidebar
 from utils.config import TWITTER_BEARER_TOKEN, SERPER_KEY, OPENAI_API_KEY
 
