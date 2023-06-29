@@ -7,7 +7,6 @@ import requests
 
 import streamlit as st
 
-from utils.haystack import query, start_haystack
 from utils.ui import reset_results, set_initial_state, sidebar
 from utils.config import TWITTER_BEARER_TOKEN, SERPER_KEY, OPENAI_API_KEY
 
@@ -38,16 +37,15 @@ run_query = (
 if run_query and question:
     reset_results()
     st.session_state.question = question
-    with st.spinner("🔎"):
-        try:
-            st.session_state.result = query(agent, question)
-        except JSONDecodeError as je:
-            st.error(
-                "👓 &nbsp;&nbsp; An error occurred reading the results. Is the document store working?"
-            )    
-        except Exception as e:
-            logging.exception(e)
-            st.error("🐞 &nbsp;&nbsp; An error occurred during the request.")            
+    try:
+        st.session_state.result = run_agent(agent, question)
+    except JSONDecodeError as je:
+        st.error(
+            "👓 &nbsp;&nbsp; An error occurred reading the results. Is the document store working?"
+        )    
+    except Exception as e:
+        logging.exception(e)
+        st.error("🐞 &nbsp;&nbsp; An error occurred during the request.")            
             
 if st.session_state.result:
     result = st.session_state.result

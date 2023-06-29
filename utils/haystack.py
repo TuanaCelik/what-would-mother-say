@@ -36,10 +36,9 @@ def start_haystack(openai_key, twitter_bearer, serper_key, last_k_tweets):
     
 
 @st.cache_data(show_spinner=True)
-def query(_agent, question):
+def run_agent(_agent, question):
     try:
         result = _agent.run(question)
     except Exception as e:
-        print(e)
         result = ["Life isn't ideal sometimes and this Agent fails at doing a good job.. Maybe try another query..."]
     return result
