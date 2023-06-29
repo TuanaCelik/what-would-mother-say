@@ -24,7 +24,7 @@ agent = start_haystack(openai_key=OPENAI_API_KEY, twitter_bearer=TWITTER_BEARER_
 # st.session_state["api_keys_configured"] = True
 
 # Search bar
-question = st.text_input("If the twitter account tuanacelik were to write a tweet in their style about climate change, what would it be?", on_change=reset_results) 
+question = st.text_input("Example: If the twitter account tuanacelik were to write a tweet in their style about climate change, what would it be?", on_change=reset_results) 
 run_pressed = st.button("Generate tweet")
 # else:
 #     st.write("Please provide your OpenAI Key to start using the application")
