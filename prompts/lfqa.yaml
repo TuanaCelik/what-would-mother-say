@@ -1,0 +1,18 @@
+description: A long form question answering prompt
+meta:
+  authors:
+  - Tuana
+name: Tuana/lfqa
+tags:
+- question-answering
+text: |
+  Synthesize a comprehensive answer from the following most relevant paragraphs and the given question.
+  Provide a clear and concise response that summarizes the key points and information presented in the paragraphs.
+  Your answer should be in your own words and be no longer than 50 words.
+  
+  Paragraphs: {documents}
+  
+  Question: {query}
+  
+  Answer:
+version: 0.1.1
