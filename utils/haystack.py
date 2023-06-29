@@ -23,9 +23,9 @@ def start_haystack(openai_key, twitter_bearer, serper_key, last_k_tweets):
     agent = Agent(prompt_node=pn, prompt_template="./prompts/twitter_agent.yaml")
 
     tweet_retriver_tool = Tool(name="TwitterRetriever", pipeline_or_node=twitter_retriver, 
-                               description="Useful for when you need to retrive the latest tweets from a username to get an understanding of their style", 
+                               description="Useful for when you need to retrieve the latest tweets from a username to get an understanding of their style", 
                                output_variable="results")
-    web_tool = Tool(name="WebSearch", pipeline_or_node=web_pipeline, description="Uesful for when you need to research the latest about a new topic")
+    web_tool = Tool(name="WebSearch", pipeline_or_node=web_pipeline, description="Useful for when you need to research the latest about a new topic")
 
     agent.add_tool(tweet_retriver_tool)
     agent.add_tool(web_tool)
