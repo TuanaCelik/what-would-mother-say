@@ -1,12 +1,9 @@
 
-from annotated_text import annotation
 from json import JSONDecodeError
 import logging
-from markdown import markdown
-import requests
 
 import streamlit as st
-from utils.haystack import run_agent
+from utils.haystack import run_agent, start_haystack
 from utils.ui import reset_results, set_initial_state, sidebar
 from utils.config import TWITTER_BEARER_TOKEN, SERPER_KEY, OPENAI_API_KEY
 
