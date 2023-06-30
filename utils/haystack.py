@@ -6,7 +6,7 @@ from haystack.nodes import PromptNode, PromptTemplate, WebRetriever
 from haystack.pipelines import WebQAPipeline
 
 
-def start_haystack(openai_key, twitter_bearer, serper_key, last_k_tweets):
+def start_haystack(openai_key, twitter_bearer, serper_key):
     prompt_node = PromptNode(
         "text-davinci-003",
         default_prompt_template=PromptTemplate(prompt="./prompts/lfqa.yaml"),
@@ -17,9 +17,9 @@ def start_haystack(openai_key, twitter_bearer, serper_key, last_k_tweets):
     web_retriever = WebRetriever(api_key=serper_key, top_search_results=2, mode="preprocessed_documents")
     web_pipeline = WebQAPipeline(retriever=web_retriever, prompt_node=prompt_node)
 
-    twitter_retriver = TwitterRetriever(bearer_token=twitter_bearer, last_k_tweets=last_k_tweets)
+    twitter_retriver = TwitterRetriever(bearer_token=twitter_bearer, last_k_tweets=15)
 
-    pn = PromptNode(model_name_or_path="gpt-4", api_key=openai_key, stop_words=["Observation:"])
+    pn = PromptNode(model_name_or_path="gpt-4", api_key=openai_key, stop_words=["Observation:"], max_length=400)
     agent = Agent(prompt_node=pn, prompt_template="./prompts/twitter_agent.yaml")
 
     tweet_retriver_tool = Tool(name="TwitterRetriever", pipeline_or_node=twitter_retriver, 

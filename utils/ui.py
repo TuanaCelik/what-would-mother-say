@@ -16,6 +16,9 @@ def reset_results(*args):
 # def set_openai_api_key(api_key: str):
 #     st.session_state["OPENAI_API_KEY"] = api_key
 
+# def set_serper_dev_key(api_key: str):
+#     st.session_state["SERPER_KEY"] = api_key
+
 def sidebar():
     with st.sidebar:
         image = Image.open('logo/haystack-logo-colored.png')
@@ -27,12 +30,12 @@ def sidebar():
 
         st.markdown(
             "## How to use\n"
-            # "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below\n"
+            # "1. Enter your [OpenAI API](https://platform.openai.com/account/api-keys) and [SerperDev API](https://serper.dev/) keys below\n"
             "1. Enter a query that includes a twitter username and be descriptive about wanting a tweet as a result.\n"
             "2. Enjoy 🤗\n"
         )
 
-        # api_key_input = st.text_input(
+        # openai_api_key_input = st.text_input(
         #     "OpenAI API Key",
         #     type="password",
         #     placeholder="Paste your OpenAI API key here (sk-...)",
@@ -40,8 +43,19 @@ def sidebar():
         #     value=st.session_state.get("OPENAI_API_KEY", ""),
         # )
 
-        # if api_key_input:
-        #     set_openai_api_key(api_key_input)
+        # serper_api_key_input = st.text_input(
+        #     "SerperDev API Key",
+        #     type="password",
+        #     placeholder="Paste your SerperDev API key here (sk-...)",
+        #     help="You can get your API key from https://serper.dev.",
+        #     value=st.session_state.get("SERPER_KEY", ""),
+        # )
+
+        # if openai_api_key_input:
+        #     set_openai_api_key(openai_api_key_input)
+        
+        # if serper_api_key_input:
+        #     set_serper_dev_key(serper_api_key_input)
 
         st.markdown("---")
         st.markdown(
