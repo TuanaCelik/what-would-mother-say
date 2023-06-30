@@ -65,7 +65,7 @@ def sidebar():
             "as well as a custom `TweetRetriever` node\n"
             " The source code is also on [GitHub](https://github.com/TuanaCelik/what-would-mother-say)"
             " with instructions to run locally.\n"
-            "You can see how the `PromptNode` was set up [here](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/haystack.py)")
+            "You can see how the `Agent` was set up [here](https://github.com/TuanaCelik/what-would-mother-say/blob/main/utils/haystack.py)")
         st.markdown("---")
         st.markdown("Made by [tuanacelik](https://twitter.com/tuanacelik)")
         st.markdown("---")
