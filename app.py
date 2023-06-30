@@ -14,7 +14,7 @@ sidebar()
 
 st.write("# 👩 What would they have tweeted about this?")
 st.write("## About this App")
-st.write("This app, buily with [Haystack](https://github.com/deepset-ai/haystack#readme) uses an [Agent](https://docs.haystack.deepset.ai/docs/agent) (with GPT-4) with a `WebSearch` and `TwitterRetriever` tool")
+st.write("This app, built with [Haystack](https://github.com/deepset-ai/haystack#readme) uses an [Agent](https://docs.haystack.deepset.ai/docs/agent) (with GPT-4) with a `WebSearch` and `TwitterRetriever` tool")
 st.write("The `TwitterRetriever` is set to retrieve the latest 15 tweets by the given twitter username to construct an understanding of their style of tweeting")
 st.write("### Instructions")
 st.write("For best results, please provide a Twitter username as it appears on twitter. E.g.: [dog_feelings](https://twitter.com/dog_feelings) 🐶")
