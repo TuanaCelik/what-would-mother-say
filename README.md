@@ -12,17 +12,17 @@ pinned: false
 # What would mother say?
 
 This app includes a Haystack agent with access to 2 tools:
-- `TweetRetriever`: Useful for when you need to retrive the latest tweets from a username to get an understanding of their style
+- `MastodonRetriever`: Useful for when you need to retrive the latest posts from a username to get an understanding of their style
 - `WebSearch`: Useful for when you need to research the latest about a new topic
 
-We build an Agent that aims to first understand the style in which a username tweets. Then, it uses the WebSearch tool to gain knowledge on a topic that the LLM may not have info on, to generate a tweet in the users style about that topic.
+We build an Agent that aims to first understand the style in which a username posts. Then, it uses the WebSearch tool to gain knowledge on a topic that the LLM may not have info on, to generate a post in the users style about that topic.
 ### Try it out on [🤗 Spaces](https://huggingface.co/spaces/Tuana/what-would-mother-say)
 
 ##### A showcase of a Haystack Agent with a custom `TwitterRetriever` Node and a `WebQAPipeline` as tools.
 
 **Custom Haystack Node**
 
-This repo contains a streamlit application that given a query about what a certain twitter username would post on a given topic, generates a tweet in their style (or tries to). It does so by using a custom Haystack node I've built called the [`TweetRetriever`](/custom_nodes/tweet_retriever.py)
+This repo contains a streamlit application that given a query about what a certain twitter username would post on a given topic, generates a post in their style (or tries to). It does so by using a custom Haystack node I've built called the [`MastodonFetcher`](https://haystack.deepset.ai/integrations/mastodon-fetcher)
 
 **Custom PromptTemplates**
 

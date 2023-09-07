@@ -31,7 +31,7 @@ def sidebar():
         st.markdown(
             "## How to use\n"
             # "1. Enter your [OpenAI API](https://platform.openai.com/account/api-keys) and [SerperDev API](https://serper.dev/) keys below\n"
-            "1. Enter a query that includes a twitter username and be descriptive about wanting a tweet as a result.\n"
+            "1. Enter a query that includes a Mastodon username and be descriptive about wanting a post as a result.\n"
             "2. Enjoy 🤗\n"
         )
 
@@ -62,7 +62,7 @@ def sidebar():
             "## How this works\n"
             "This app was built with [Haystack](https://haystack.deepset.ai) using the"
             " [`Agent`](https://docs.haystack.deepset.ai/docs/agent) custom [`PromptTemplates`](https://docs.haystack.deepset.ai/docs/prompt_node#templates)\n\n"
-            "as well as a custom `TweetRetriever` node\n"
+            "as well as a custom `MastodonFetcher` node\n"
             " The source code is also on [GitHub](https://github.com/TuanaCelik/what-would-mother-say)"
             " with instructions to run locally.\n"
             "You can see how the `Agent` was set up [here](https://github.com/TuanaCelik/what-would-mother-say/blob/main/utils/haystack.py)")
